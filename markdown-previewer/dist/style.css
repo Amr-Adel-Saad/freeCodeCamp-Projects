@@ -1,0 +1,41 @@
+#header {
+  color: white;
+  background-color: black;
+}
+
+#title {
+  color: white;
+  text-align: center;
+  margin: 0;
+}
+
+#main {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+
+.box {
+  background-color: white;
+  overflow: scroll;
+  width: 45%;
+  max-height: 100vh;
+  padding: 10px;
+  margin-bottom: 40px;
+  box-shadow: 0 0 10px black;
+}
+
+.box:focus {
+  outline: none;
+  border: 2px solid black;
+}
+
+img {
+  width: 100%;
+  height: auto;
+}
+
+blockquote {
+  color: white;
+  background-color: black;
+}

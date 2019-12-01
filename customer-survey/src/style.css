@@ -1,0 +1,78 @@
+body {
+  background-color: gold;
+  font-family: Helvetica;
+}
+h1 {
+  font-family: Muli, sans-serif;
+  text-align: center;
+  margin: 30px;
+  font-size: 50px;
+}
+#main {
+  background-color: snow;
+  width: 70%;
+  margin: auto;
+  text-align: center;
+  border-radius: 10px;
+  box-shadow: 0 0 10px black;
+}
+@media (max-width: 500px) {
+  #main {
+    width: 100%;
+  }
+}
+#description {
+  padding-top: 35px;
+  margin-bottom: 35px;
+  font-size: 25px;
+}
+#survey-form {
+  margin-right: 30%;
+  display: grid;
+  grid-template-columns: auto auto;
+  grid-gap: 20px 15px;
+  padding-bottom: 45px;
+}
+label {
+  text-align: right;
+  align-self: start;
+  padding-left: 10px;
+}
+.field {
+  height: 25px;
+  border: 2px solid gray;
+  border-radius: 4px;
+}
+.checkboxes, .radio-buttons {
+  display: flex;
+  flex-direction: column;
+}
+[type="checkbox"], [type="radio"] {
+  height: auto;
+  margin: 5px;
+}
+textarea {
+  max-width: 200px;
+  max-height: 250px;
+}
+#submit {
+  font-size: 20px;
+  position: relative;
+  left: 100%;
+  margin-top: 25px;
+  color: white;
+  background-color: crimson;
+  height: 50px;
+  width: 110px;
+  border: none;
+  border-radius: 10px;
+}
+#submit:hover {
+  border: 2px solid white;
+  font-size: 19px;
+}
+footer {
+  font-family: Muli, sans-serif;
+  font-size: 35px;
+  text-align: center;
+}

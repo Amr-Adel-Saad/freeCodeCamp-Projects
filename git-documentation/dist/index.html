@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>Git Documentation</title>
+  <link rel="stylesheet" href="./style.css">
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<html>
+  <head>
+    <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+    <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
+    <title>Technical Documentation</title>
+  </head>
+  
+  <body>
+    <nav id="navbar">
+      <header id="title">Git Documentation</header>
+      <div id="links">
+        <a class="nav-link" href="#Introduction">Introduction</a>
+        <a class="nav-link" href="#Types_of_VCSs">Types of VCSs</a>
+        <a class="nav-link" href="#Introduction_into_Git">Introduction into Git</a>
+        <a class="nav-link" href="#Why_Git?">Why Git?</a>
+        <a class="nav-link" href="#Git_repositories">Git repositories</a>
+        <a class="nav-link" href="#Installation_of_Git">Installation of Git</a>
+        <a class="nav-link" href="#The_concept_of_branches">The concept of branches</a>
+        <a class="nav-link" href="#Basic_Git_commands">Basic Git commands</a>
+        <a class="nav-link" href="#Git_hosting">Git hosting</a>
+        <a class="nav-link" href="#GitHub">GitHub</a>
+        <a class="nav-link" href="#Reference">Reference</a>
+      </div>
+    </nav>
+    
+    <main id="main-doc">
+      <section id="Introduction" class="main-section">
+        <header>Introduction</header>
+        <p>A version control system (VCS) allows you to track the history of a collection of files. It supports creating different versions of this collection. Each version captures a snapshot of the files at a certain point in time and the VCS allows you to switch between these versions. These versions are stored in a specific place, typically called a repository.</p>               <p>VCSs are typically used to track changes in text files. These text files can for example be source code for a programming language, HTML or configuration files. Of course, version control systems are not limited to text files, they can also handle other types of files. For example, you may use a VCS to track the different versions of a png file.</p>
+      </section>
+      
+      <section id="Types_of_VCSs" class="main-section">
+        <header>Types of VCSs</header>
+        <ul>
+          <li><strong>Localized, and Centeralized VCSs:</strong>
+            <p>A <i>localized version control system</i> keeps local copies of the files. This approach can be as simple as creating a manual copy of the relevant files.</p>
+            <p>A <i>centralized version control system</i> provides a server software component which stores and manages the different versions of the files. A developer can copy (checkout) a certain version from the central sever onto their individual computer.</p>
+          <p>Both approaches have the drawback that they have one single point of failure. In a localized version control systems it is the individual computer and in a centralized version control systems it is the server machine. Both system makes it also harder to work in parallel on different features.</p></li>
+          <li><strong>Distributed (Decenteralized) VCSs:</strong>
+          <p>In a distributed version control system each user has a complete local copy of a repository on his individual computer. The user can copy an existing repository. This copying process is typically called cloning and the resulting repository can be referred to as a clone.</p>
+          <p>Every clone contains the full history of the collection of files and a cloned repository has the same functionality as the original repository.</p>
+          <p>Every repository can exchange versions of the files with other repositories by transporting these changes. This is typically done via a repository running on a server which is, unlike the local machine of a developer, always online. Typically, there is a central server for keeping a repository but each cloned repository is a full copy of this repository. The decision which of the copies is considered to be the central server repository is pure convention.</p></li>
+        </ul>
+      </section>
+      
+      <section id="Introduction_into_Git" class="main-section">
+        <header>Introduction into Git</header>
+        <p>Git is currently the most popular implementation of a distributed version control system.</p>
+        <p>Git originates from the Linux kernel development and was founded in 2005 by Linus Torvalds. Nowadays it is used by many popular open source projects, e.g., the Android or the Eclipse developer teams, as well as many commercial organizations.</p>
+        <p>The core of Git was originally written in the programming language C, but Git has also been re-implemented in other languages, e.g., Java, Ruby and Python.</p>
+      </section>
+      
+      <section id="Why_Git?" class="main-section">
+        <header>Why Git?</header>
+        <p>According to the latest Stack Overflow developer survey, more than 70 percent of developers use Git, making it the most-used VCS in the world. Git is commonly used for both open source and commercial software development, with significant benefits for individuals, teams and businesses.</p>
+        <ul>
+          <li>Git lets developers see the entire timeline of their changes, decisions, and progression of any project in one place. From the moment they access the history of a project, the developer has all the context they need to understand it and start contributing.</li>
+          <li>
+            Developers work in every time zone. With a DVCS like Git, collaboration can happen any time while maintaining source code integrity. Using branches, developers can safely propose changes to production code.</li>
+          <li>Businesses using Git can break down communication barriers between teams and keep them focused on doing their best work. Plus, Git makes it possible to align experts across a business to collaborate on major projects.</li>
+        </ul>
+      </section>
+    
+      <section id="Git_repositories" class="main-section">
+        <header>Git repositories</header>
+        <p>A Git repository contains the history of a collection of files starting from a certain directory. The process of copying an existing Git repository via the Git tooling is called cloning. After cloning a repository the user has the complete repository with its history on his local machine. Of course, Git also supports the creation of new repositories.</p>
+        <p>If you want to delete a Git repository, you can simply delete the folder which contains the repository.</p>
+        <p>If you clone a Git repository, by default, Git assumes that you want to work in this repository as a user. Git also supports the creation of repositories targeting the usage on a server.</p>
+        <ul>
+          <li><strong><i>Bare repositories</i></strong> are supposed to be used on a server for sharing changes coming from different developers. Such repositories do not allow the user to modify locally files and to create new versions for the repository based on these modifications.</li>
+          <li><strong><i>Non-bare repositories</i></strong> target the user. They allow you to create new changes through modification of files and to create new versions in the repository. This is the default type which is created if you do not specify any parameter during the clone operation.</li>
+      </section>
+        
+      <section id="Installation_of_Git" class="main-section">
+        <header>Installation of Git</header>
+        <p>On <strong>Ubuntu</strong> and similar systems you can install the Git command line tool via the following command:</p>
+        <code>sudo apt-get install git</code>
+        <p>On <strong>Fedora, Red Hat</strong> and similar systems you can install the Git command line tool via the following command:</p>
+        <code>dnf install git</code>
+        <p>A <strong>Windows</strong> version of Git can be found on the <a href="http://git-scm.com/downloads" target="_blank">Git download page</a>. This website provides native installers for each operating system. The homepage of the Windows Git project is <a href="https://git-for-windows.github.io/" target="_blank">git for window</a>.</p>
+        <p>The easiest way to install Git on a Mac is via the <a href="http://git-scm.com/downloads" target="_blank">Git download page</a> and to download and run the installer for Mac OS X.</p>
+        <p>Git is also installed by default with the Apple Developer Tools on Mac OS X.</p>
+      </section>
+        
+      <section id="The_concept_of_branches" class="main-section">
+        <header>The concept of branches</header>
+        <p>Git supports <i>branching</i> which means that you can work on different versions of your collection of files. A branch allows the user to switch between these versions so that he can work on different changes independently from each other.</p>
+        <p>For example, if you want to develop a new feature, you can create a branch and make the changes in this branch. This does not affect the state of your files in other branches.For example, if you want to develop a new feature, you can create a branch and make the changes in this branch. This does not affect the state of your files in other branches. For example, you can work independently on a branch for bugfixes and on another branch for implementing a new feature.</p>
+        <p>Branches in Git are local to the repository. A branch created in a local repository does not need to have a counterpart in a remote repository. Local branches can be compared with other local branches and with <i>remote-tracking</i> branches. A remote-tracking branch proxies the state of a branch in another remote repository.</p>
+        <p>Git supports the combination of changes from different branches. The developer can use Git commands to combine the changes at a later point in time.</p>
+      </section>
+        
+      <section id="Basic_Git_commands" class="main-section">
+        <header>Basic Git commands</header>
+        <p>To use Git, developers use specific commands to copy, create, change, and combine code. These commands can be executed directly from the command line or by using an application like <a href="https://desktop.github.com/" target="_blank">GitHub Desktop</a> or Git Kraken. Here are some common commands for using Git:</p>
+        <ul>
+          <li><code>git init</code>            
+            <p>Initializes a brand new Git repository and begins tracking an existing directory. It adds a hidden subfolder within the existing directory that houses the internal data structure required for version control.</p></li>
+          <li><code>git clone</code>            
+            <p>Creates a local copy of a project that already exists remotely. The clone includes all the project’s files, history, and branches.</p></li>
+          <li><code>git add</code>            
+            <p> Stages a change. Git tracks changes to a developer’s codebase, but it’s necessary to stage and take a snapshot of the changes to include them in the project’s history. This command performs staging, the first part of that two-step process. Any changes that are staged will become a part of the next snapshot and a part of the project’s history. Staging and committing separately gives developers complete control over the history of their project without changing how they code and work.</p></li>
+          <li><code>git commit</code>            
+            <p>Saves the snapshot to the project history and completes the change-tracking process. In short, a commit functions like taking a photo. Anything that’s been staged with <strong>git add</strong> will become a part of the snapshot with <strong>git commit</strong>.</p></li>
+          <li><code>git status</code>            
+            <p>Shows the status of changes as untracked, modified, or staged.</p></li>
+          <li><code>git branch</code>            
+            <p>Shows the branches being worked on locally.</p></li>
+          <li><code>git clone</code>            
+            <p>Creates a local copy of a project that already exists remotely. The clone includes all the project’s files, history, and branches.</p></li>
+          <li><code>git merge</code>            
+            <p>Merges lines of development together. This command is typically used to combine changes made on two distinct branches. For example, a developer would merge when they want to combine changes from a feature branch into the master branch for deployment.</p></li>
+          <li><code>git pull</code>            
+            <p>Updates the local line of development with updates from its remote counterpart. Developers use this command if a teammate has made commits to a branch on a remote, and they would like to reflect those changes in their local environment.</p></li>
+          <li><code>git push</code>            
+            <p>Updates the remote repository with any commits made locally to a branch.</p></li>
+          <p><strong>Learn more from </strong><a href="https://git-scm.com/docs" target="blank"> a full reference guide to Git commands</a>.</p>
+      </section>
+        
+      <section id="Git_hosting" class="main-section">
+        <header>Git hosting</header>
+        <p>Git repositories can be hosted on Git hosting providers e.g., <a href="https://github.com/" target="_blank">GitHub</a>, and <a href="https://bitbucket.org/" target="_blank">Bitbucket</a>.</p>
+      </section>
+        
+      <section id="GitHub" class="main-section">
+        <header>GitHub</header>
+        <p>GitHub is a Git hosting repository that provides developers with tools to ship better code through command line features, issues (threaded discussions), pull requests, code review, or the use of a collection of free and for-purchase apps in the GitHub Marketplace. With collaboration layers like the GitHub flow, a community of 15 million developers, and an ecosystem with hundreds of integrations, GitHub changes the way software is built.</p>
+        <p>GitHub builds collaboration directly into the development process. Work is organized into repositories, where developers can outline requirements or direction and set expectations for team members. Then, using the GitHub flow, developers simply create a branch to work on updates, commit changes to save them, open a pull request to propose and discuss changes, and merge pull requests once everyone is on the same page.</p>
+        </section>
+        
+        <section id="Reference" class="main-section">
+          <header>Reference</header>
+          <p>Documentation in this page is taken from <a href="https://www.vogella.com/tutorials/Git/article.html" target="_blank">Vogella</a>, and <a href="https://guides.github.com/introduction/git-handbook/" target="_blank">GitHub</a>.</p>
+        </section>
+    </main>    
+  </body>
+</html>
+<!-- partial -->
+  
+</body>
+</html>

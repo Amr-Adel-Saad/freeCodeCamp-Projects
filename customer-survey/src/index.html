@@ -1,0 +1,70 @@
+<html>
+  <head>
+    <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
+    <title>Customer Survey</title>
+  </head>
+  
+  <body>
+    <main>
+      <header>
+        <link href="https://fonts.googleapis.com/css?family=Muli&display=swap" rel="stylesheet">
+        <h1 id="title">Customer Survey<h1>
+      </header>
+          
+      <div id="main">
+        <p id="description"><strong>Your Opinion Matters!</strong></p>
+        <form id="survey-form">          
+          <label id="name-label" for="name">*Name:</label>
+          <input class="field" id="name" type="text" placeholder=" Enter your name" required>
+          <label id="email-label" for="email">*Email:</label>
+          <input class="field" id="email" type="email" placeholder=" Enter your email" required>         
+          <label id="number-label" for="number">*How many stars (out of 5) do you give us?</label>
+          <input class="field" id="number" type="number" min="1" max="5" placeholder=" Rate us" required>
+          
+          <label>What did you like about us?</label>
+          <div class="checkboxes">
+            <label for="foodtaste">
+              <input type="checkbox" id="foodtaste" value="foodtaste"> Food taste</label>
+            <label for="quality">
+              <input type="checkbox" id="quality" value="quality"> Quality</label>
+            <label for="service">
+              <input type="checkbox" id="service" value="service"> Service</label>
+            <label for="location">
+              <input type="checkbox" id="location" value="location"> Location</label>
+            <label for="design&style">
+              <input type="checkbox" id="design&style" value="design&style"> Design & Style</label>
+            <label for="valuevsprice">
+              <input type="checkbox" id="valuevsprice" value="valuevsprice"> Value vs Price</label>
+          </div>
+          
+          <label>Would you recommend us to your friends?</label>
+          <div class="radio-buttons">
+            <label for="definitely">
+              <input type="radio" id="definitely" value="definitely" name="recommend"> Definitely</label>
+            <label for="maybe">
+              <input type="radio" id="maybe" value="maybe" name="recommend"> Maybe</label>
+            <label for="not-sure">
+              <input type="radio" id="not-sure" value="not-sure" name="recommend"> Not sure</label>
+          </div>
+          
+          <label for="dropdown">In which city would you like our new branch to be?</label>
+          <select id="dropdown" class="field">
+            <option value="0">Select City:</option>
+            <option value="maadi">Maadi</option>
+            <option value="6october">6 October</option>
+            <option value="nasrcity">Nasr city</option>
+          </select>
+          
+          <label for="comments">Any Comments or Suggestions?</label>
+          <textarea id="comments" placeholder=" Enter comments..."></textarea>
+          
+          <button type="submit" id="submit">Submit</button>
+        </form>
+      </div>
+    </main>
+    <footer>
+          <p>Thank you</p>
+    </footer>
+  </body>
+      
+</html>

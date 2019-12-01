@@ -1,0 +1,82 @@
+body {
+  font-family: roboto, arial;
+}
+#navbar {
+  position: fixed;
+  width: 23.8vw;
+  top: 0;
+  left: 0;
+  border: 3px solid gray;
+  border-right: 6px solid gray;
+}
+header {
+  font-weight: bold;
+  font-size: 20px;
+}
+#title {
+  background: gainsboro;
+  font-size: 30px;
+  margin: 0px;
+  padding: 26px;
+  z-index: 1;
+}
+#links {
+  height: 85vh;
+  width: 325px;
+  overflow-y: scroll;
+}
+.nav-link {
+  display: block;
+  color: black;
+  text-decoration: none;
+  font-size: 18px;
+  border-top: 1px solid black;
+  padding: 15px;
+  padding-left: 40px;
+}
+#main-doc {
+  margin-left: 25vw;
+  padding-top: 20px;
+  padding-right: 50px;
+}
+.main-section {
+  padding-left: 15px;
+  line-height: 2;
+}
+code {
+  display: block;
+  color: white;
+  font-size: 16px;
+  background-color: midnightblue;
+  border-radius: 5px;
+  width: 90%;
+  padding: 18px;
+  padding-left: 50px;
+  line-height: normal;
+}
+@media (max-width: 800px) {
+  body {
+    display: flex;
+    flex-direction: column;
+    align-items: cnter;
+  }
+  #navbar {
+    position: static;
+    margin-top: 20px;
+    width: 90vw;
+    border-right: 3px solid gray;
+  }
+  #links {
+    height: 40vh;
+    width: 90vw;
+    overflow-y: scroll;
+  }
+  #main-doc {
+    margin-left: 1vw;
+    padding-right: 1vw;
+  }
+  code {
+    width: 60vw;
+    padding-left: 5vw;
+  }
+}
