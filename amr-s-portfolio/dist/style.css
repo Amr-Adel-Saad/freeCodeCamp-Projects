@@ -54,7 +54,7 @@ body {
 #projects {
   color: black;
   text-align: center;
-  background-color: white;
+  background-color: lavender;
   overflow: auto;
 }
 .title {
@@ -73,8 +73,8 @@ body {
   border-radius: 5px;
   overflow: hidden;
   margin-bottom: 60px;
-  width: 400px;
-  height: 475px;
+  width: 380px;
+  height: 470px;
   text-decoration: none;
   box-shadow: 0 0 5px black;
   transition: margin-top 0.5s;
